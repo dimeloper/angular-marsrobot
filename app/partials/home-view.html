@@ -1,0 +1,58 @@
+<div class="marsrobot-top-bar">
+   <img src="images/robot.png">
+   <i class="fa fa-bars"></i>
+ </div>
+<div class="marsrobot-container">
+ 
+ <div class="top-banner">
+   <h2>Are you ready to explore Mars?</h2>
+ </div>
+ <div class="robotdata-container">
+  <div class="row">
+    <div class="col-2">
+      <p class="robotdata-label">Map Size</p>
+      <input type="text" class="robotdata-input" ng-model="data.mapSize">
+      <br>
+      <p class="robotdata-label">Number of robots</p>
+      <input type="text" class="robotdata-input" ng-model="data.robotsNum" ng-change="changeNumber(data.robotsNum)">
+      
+    </div>
+    <div class="col-2">
+      <p class="robotdata-label">Robot Data</p>
+      <div class="robot" ng-repeat="robot in data.robotsData">
+        <p class="robot-counter">Robot {{robot.id}}</p>
+        <input type="text" class="robotdata-input" ng-model="robot.initialization" placeholder="Initial Position">
+        <input type="text" class="robotdata-input" ng-model="robot.commands" placeholder="Directions" style="    width: 120px;">
+      </div>
+      <button class="release" ng-click="submitData()">Go Robots!</button>
+    </div>
+    
+  </div>
+  <div class="marsrobot-container">
+    <div class="robot-column" ng-repeat="result in data.results">
+      <h1>{{result}}</h1>
+    </div>
+  </div>
+  
+  
+  
+  
+    
+</div>
+
+<div class="marsrobot-container-end"></div>
+</div>
+<div class="marsrobot-footer">
+  <h2>Are you ready to explore Mars?</h2>
+  <div class="marsrobot-footer-content">
+  <div class="marsrobot-footer-links">
+    <a href="#">Home</a> |
+    <a href="#">Mars</a> |
+    <a href="#">Robots</a> |
+    <a href="#">Dimitris Kiriakakis</a>
+    
+  </div>
+
+  </div>
+</div>
+
